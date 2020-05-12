@@ -1,0 +1,116 @@
+ar:دايو	B-ORG
+ar:(	I-ORG
+ar:شركة	I-ORG
+ar:)	I-ORG
+
+ar:كانت	O
+ar:المدة	O
+ar:القانونية	O
+ar:السابقة	O
+ar:لأسبوع	O
+ar:العمل	O
+ar:هي	O
+ar:39	O
+ar:ساعة،	O
+ar:والتي	O
+ar:حددها	O
+ar:فرنسوا	B-PER
+ar:ميتيران،	I-PER
+ar:وهو	O
+ar:عضو	O
+ar:أيضًا	O
+ar:في	O
+ar:الحزب	B-ORG
+ar:الاشتراكي	I-ORG
+ar:.	O
+
+ar:تحويل	O
+ar:نادي	B-ORG
+ar:باسوش	I-ORG
+ar:دي	I-ORG
+ar:فيريرا	I-ORG
+
+ar:حكم	B-PER
+ar:(	I-PER
+ar:كرة	I-PER
+ar:قدم	I-PER
+ar:)	I-PER
+
+ar:ديفيد	B-PER
+ar:نالبانديان	I-PER
+ar:''	O
+ar:(	O
+ar:الجولة	O
+ar:الثالثة	O
+ar:)	O
+
+ar:(	O
+ar:أقاليم	B-LOC
+ar:ما	I-LOC
+ar:وراء	I-LOC
+ar:البحار	I-LOC
+ar:)	O
+
+ar:تحويل	O
+ar:دهنو	B-LOC
+ar:(	I-LOC
+ar:تایباد	I-LOC
+ar:)	I-LOC
+
+ar:أليك	B-PER
+ar:بالدوين	I-PER
+ar:-	O
+ar:30	B-ORG
+ar:روك	I-ORG
+
+ar:تحويل	O
+ar:شور	B-LOC
+ar:بلاغ	I-LOC
+ar:(	I-LOC
+ar:مقاطعة	I-LOC
+ar:غرمي	I-LOC
+ar:)	I-LOC
+
+ar:تحويل	O
+ar:رضا	B-PER
+ar:عبد	I-PER
+ar:العال	I-PER
+
+ar:تحويل	O
+ar:برونزويك	B-LOC
+ar:(	I-LOC
+ar:جورجيا	I-LOC
+ar:)	I-LOC
+
+ar:تحويل	O
+ar:سانت	B-LOC
+ar:فينسنت	I-LOC
+ar:والغرينادين	I-LOC
+
+ar:الدكتوراه	O
+ar:الفخرية	O
+ar:من	O
+ar:جامعة	B-ORG
+ar:المنصورة	I-ORG
+ar:.	O
+
+ar:تحويل	O
+ar:يحيى	B-PER
+ar:بن	I-PER
+ar:سرافيون	I-PER
+
+ar:ألكسندر	B-PER
+ar:فلمنج	I-PER
+ar:طبيب	O
+ar:أسكتلندي	O
+
+ar:'	O
+ar:''	O
+ar:ماتس	B-PER
+ar:ويلندر	I-PER
+ar:(	O
+ar:البطل	O
+ar:)	O
+ar:'	O
+ar:''	O
+

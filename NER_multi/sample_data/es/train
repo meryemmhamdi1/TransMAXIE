@@ -1,0 +1,106 @@
+es:REDIRECCIÓN	O
+es:Algarrobo	B-LOC
+es:(	I-LOC
+es:Chile	I-LOC
+es:)	I-LOC
+
+es:W.	B-PER
+es:G.	I-PER
+es:Sebald	I-PER
+
+es:'	O
+es:''	O
+es:Entrenador	O
+es:/	O
+es:a	O
+es:''	O
+es:Tamás	B-PER
+es:Faragó	I-PER
+
+es:REDIRECCIÓN	O
+es:Società	B-ORG
+es:Sportiva	I-ORG
+es:Virtus	I-ORG
+es:Lanciano	I-ORG
+es:1924	I-ORG
+
+es:Houses	B-ORG
+es:of	I-ORG
+es:the	I-ORG
+es:Holy	I-ORG
+
+es:**	O
+es:Luanda	B-LOC
+es:(	O
+es:Embajada	O
+es:)	O
+
+es:REDIRECCIÓN	O
+es:José	B-PER
+es:Luis	I-PER
+es:García	I-PER
+
+es:Condado	B-LOC
+es:de	I-LOC
+es:Duplin	I-LOC
+es:suroeste	O
+
+es:REDIRECCIÓN	O
+es:São	B-LOC
+es:Pedro	I-LOC
+es:do	I-LOC
+es:Funchal	I-LOC
+
+es:50px	O
+es:''	O
+es:Huelva	B-LOC
+es:''	O
+es:'146.173	O
+es:hab	O
+es:.	O
+
+es:REDIRECCIÓN	O
+es:Departamento	B-LOC
+es:de	I-LOC
+es:Cajamarca	I-LOC
+
+es:Posteriormente	O
+es:se	O
+es:incorporó	O
+es:al	O
+es:Ejército	B-ORG
+es:del	I-ORG
+es:Norte	I-ORG
+es:.	O
+
+es:REDIRECCIÓN	O
+es:FC	B-ORG
+es:Progresul	I-ORG
+es:București	I-ORG
+
+es:San	B-LOC
+es:Francisco	I-LOC
+es:,	O
+es:California	B-LOC
+es:,	O
+es:Estados	B-LOC
+es:Unidos	I-LOC
+es:.	O
+
+es:'	O
+es:''	O
+es:Pedro	B-PER
+es:de	I-PER
+es:Alcántara	I-PER
+es:Téllez-Girón	I-PER
+es:y	I-PER
+es:Beaufort	I-PER
+es:Spontin	I-PER
+es:''	O
+es:'	O
+
+es:``	O
+es:E.T	B-ORG
+es:.	I-ORG
+es:''	O
+

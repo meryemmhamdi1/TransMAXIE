@@ -1,0 +1,11 @@
+en:Sioux	B-ORG
+en:Falls	I-ORG
+en:Arena	I-ORG
+en:(	O
+en:Sioux	B-LOC
+en:Falls	I-LOC
+en:,	I-LOC
+en:South	I-LOC
+en:Dakota	I-LOC
+en:)	O
+

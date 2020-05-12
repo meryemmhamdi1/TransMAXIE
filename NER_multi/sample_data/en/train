@@ -1,0 +1,159 @@
+en:R.H.	B-ORG
+en:Saunders	I-ORG
+en:(	O
+en:St.	B-ORG
+en:Lawrence	I-ORG
+en:River	I-ORG
+en:)	O
+en:(	O
+en:968	O
+en:MW	O
+en:)	O
+
+en:;	O
+en:'	O
+en:''	O
+en:Anders	B-PER
+en:Lindström	I-PER
+en:''	O
+en:'	O
+
+en:Karl	B-PER
+en:Ove	I-PER
+en:Knausgård	I-PER
+en:(	O
+en:born	O
+en:1968	O
+en:)	O
+
+en:Atlantic	B-LOC
+en:City	I-LOC
+en:,	I-LOC
+en:New	I-LOC
+en:Jersey	I-LOC
+
+en:Her	O
+en:daughter	O
+en:from	O
+en:the	O
+en:second	O
+en:marriage	O
+en:was	O
+en:Marie	B-PER
+en:d'Agoult	I-PER
+en:(	O
+en:1805–1876	O
+en:)	O
+en:,	O
+en:who	O
+en:in	O
+en:turn	O
+en:gave	O
+en:birth	O
+en:to	O
+en:several	O
+en:children	O
+en:,	O
+en:among	O
+en:them—from	O
+en:her	O
+en:liaison	O
+en:to	O
+en:Franz	B-PER
+en:Liszt	I-PER
+en:–-	O
+en:Cosima	B-PER
+en:Wagner	I-PER
+en:(	O
+en:1837–1930	O
+en:)	O
+en:.	O
+
+en:St.	B-ORG
+en:Mary	I-ORG
+en:'s	I-ORG
+en:Catholic	I-ORG
+en:Church	I-ORG
+en:(	I-ORG
+en:Sandusky	I-ORG
+en:,	I-ORG
+en:Ohio	I-ORG
+en:)	I-ORG
+
+en:Shhh	B-ORG
+en:...	I-ORG
+en:Do	I-ORG
+en:n't	I-ORG
+en:Tell	I-ORG
+en:''	O
+
+en:Antonín	B-PER
+en:Rýgr	I-PER
+en:(	O
+en:1970–72	O
+en:)	O
+
+en:*Inducted	O
+en:into	O
+en:the	O
+en:United	B-ORG
+en:States	I-ORG
+en:Hockey	I-ORG
+en:Hall	I-ORG
+en:of	I-ORG
+en:Fame	I-ORG
+en:in	O
+en:2015	O
+
+en:Dia	B-PER
+en:Evtimova	I-PER
+en:Catalina	B-PER
+en:Castaño	I-PER
+en:Dinah	B-PER
+en:Pfizenmaier	I-PER
+en:Tatjana	B-PER
+en:Malek	I-PER
+
+en:102.7	O
+en:MHz	O
+en:Triple	B-ORG
+en:J	I-ORG
+en:–	O
+en:ABC	B-ORG
+
+en:*20px	O
+en:Idaho	B-ORG
+en:State	I-ORG
+en:Highway	I-ORG
+en:5	I-ORG
+
+en:''	O
+en:Atelocentra	B-LOC
+en:''	O
+en:Meyrick	O
+en:,	O
+en:1884	O
+
+en:'	O
+en:''	O
+en:Antarctic	B-LOC
+en:prion	I-LOC
+en:''	O
+en:'	O
+
+en:James	B-PER
+en:Franco	I-PER
+en:(	O
+en:M.F.A	O
+en:.	O
+
+en:Prince	B-PER
+en:Albert	I-PER
+en:Victor	I-PER
+en:,	I-PER
+en:Duke	I-PER
+en:of	I-PER
+en:Clarence	I-PER
+en:and	I-PER
+en:Avondale	I-PER
+
