@@ -3,9 +3,8 @@ import torch
 from torch.utils import data
 import json
 
-from consts import NONE, PAD, CLS, SEP, UNK, TRIGGERS, ARGUMENTS, ENTITIES, POSTAGS
+from consts import NONE, PAD, CLS, SEP, TRIGGERS, ARGUMENTS, ENTITIES, POSTAGS
 from utils import build_vocab
-from pytorch_pretrained_bert import BertTokenizer
 from get_arguments import *
 
 # init vocab
@@ -14,7 +13,6 @@ all_entities, entity2idx, idx2entity = build_vocab(ENTITIES)
 all_postags, postag2idx, idx2postag = build_vocab(POSTAGS, BIO_tagging=False)
 all_arguments, argument2idx, idx2argument = build_vocab(ARGUMENTS, BIO_tagging=False)
 
-#tokenizer = BertTokenizer.from_pretrained('bert-base-cased', do_lower_case=False, never_split=(PAD, CLS, SEP, UNK))
 hp = get_args()
 tokenizer = MODELS_dict[hp.trans_model][1].from_pretrained(MODELS_dict[hp.trans_model][2])
 cls_token_id = tokenizer.convert_tokens_to_ids([tokenizer.cls_token])[0]
@@ -50,7 +48,6 @@ class ACE2005Dataset(data.Dataset):
 
                 for entity_mention in item['golden-entity-mentions']:
                     arguments['candidates'].append((entity_mention['start'], entity_mention['end'], entity_mention['entity-type']))
-                    #print("entity_mention: ", entity_mention) 
                     if entity_mention['end'] < len(words):
                         end_entity = entity_mention['end']
                     else:
@@ -199,8 +196,6 @@ class BETTERDataset(data.Dataset):
             count = 0
             for doc in parsed:
                 count = count + 1
-                #if count == 10:
-                #    break
                 sent_ids = []
                 arguments_dict = {}
                 triggers_dict = {}
@@ -223,7 +218,6 @@ class BETTERDataset(data.Dataset):
                     sent_id = sent["sent_id"]
 
                     if "arabic" not in fpath:
-                        #print("Arabic not in path")
                         for entity_mention in sent["mentions"]:
                             head_start_off = entity_mention[span_key]['start_token']
                             head_end_off = entity_mention[span_key]['end_token'] + 1
@@ -299,8 +293,6 @@ class BETTERDataset(data.Dataset):
                     self.triggers_li.append(triggers_dict[int(sent_id)])
                     self.arguments_li.append(arguments_dict[int(sent_id)])
 
-        print("len(self.sent_li):", len(self.sent_li))
-
     def __len__(self):
         return len(self.sent_li)
 
@@ -323,7 +315,6 @@ class BETTERDataset(data.Dataset):
             p_ids = []
             for postag in p:
                 if postag not in postag2idx:
-                    print("postag:", postag)
                     postag2idx.update({postag: len(postag2idx)})
 
                 p_ids.append(postag2idx[postag])

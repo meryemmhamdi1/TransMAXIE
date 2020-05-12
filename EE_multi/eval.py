@@ -2,12 +2,10 @@ import os
 import argparse
 
 import torch
-import torch.nn as nn
 from torch.utils import data
 
-from model import Net
 
-from data_utils import BETTERDataset, pad, all_triggers, all_entities, all_postags, idx2trigger, all_arguments
+from data_utils import BETTERDataset, pad, idx2trigger
 from utils import calc_metric, find_triggers
 
 

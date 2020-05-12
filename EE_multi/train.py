@@ -1,4 +1,9 @@
 import os
+cwd = os.getcwd()
+import sys
+from pathlib import Path
+sys.path.append(os.path.join(Path(os.getcwd()).parent, "OnlineAlignment"))
+
 from OnlineAlignment.evaluators import *
 
 import torch

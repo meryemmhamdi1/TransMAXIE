@@ -3,9 +3,15 @@ import numpy as np
 import torch
 import torch.nn as nn
 
+import os
+cwd = os.getcwd()
+import sys
+from pathlib import Path
+sys.path.append(os.path.join(Path(os.getcwd()).parent, "OnlineAlignment"))
+
 from data_utils import *
-from TripletLoss.evaluators import *
-from TripletLoss.losses import *
+from evaluators import *
+from losses import *
 
 
 lang_dict = {0: "en", 1: "ar", 2: "de", 3: "es", 4: "zh"}

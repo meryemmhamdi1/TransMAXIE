@@ -38,24 +38,24 @@ def get_args():
     parser.add_argument("--n_epochs", type=int, default=50)
     parser.add_argument("--logdir", type=str, default="logdir")
 
-    parser.add_argument("--use-quad", type=bool, default=False)
-    parser.add_argument("--use-full-trig", type=bool, default=False)
-    parser.add_argument("--use-full-arg", type=bool, default=False)
+    parser.add_argument("--use-quad", default=False, action='store_true') #False
+    parser.add_argument("--use-full-trig", default=False, action='store_true') # False
+    parser.add_argument("--use-full-arg", default=False, action='store_true') #False
 
-    parser.add_argument("--use-pos", type=bool, default=False)
-    parser.add_argument("--use-ent", type=bool, default=False)
-    parser.add_argument("--use-gcn", type=bool, default=False)
-    parser.add_argument("--use-pred-trig", type=bool, default=False)
+    parser.add_argument("--use-pos", default=False, action='store_true') #False
+    parser.add_argument("--use-ent", default=False, action='store_true') #False
+    parser.add_argument("--use-gcn", default=False, action='store_true') #False
+    parser.add_argument("--use-pred-trig", default=False, action='store_true') #False
 
     parser.add_argument("--trans-model", type=str, default="BertBaseMultilingualCased")
     parser.add_argument("--train-lang", type=str, default="english")
     parser.add_argument("--test-lang", type=str, default="spanish")
-    parser.add_argument("--use-crf-trig", type=bool, default=True)
-    parser.add_argument("--use-crf-arg", type=bool, default=False)
+    parser.add_argument("--use-crf-trig", default=False, action='store_true')  # True
+    parser.add_argument("--use-crf-arg", default=False, action='store_true') # False
     parser.add_argument("--early-stop", type=int, default=10)
 
     ## Multi-Tasking arguments
-    parser.add_argument("--use-multi-task", type=bool, default=False)
+    parser.add_argument("--use-multi-task", default=False, action='store_true') # False
     parser.add_argument("--pooling-choice", type=str, default="mean")
     parser.add_argument("--intr-ratio", type=float, default=0.5)
     parser.add_argument("--xintrpath", type=str, default="/nas/clear/users/meryem/Datasets/XSTS")

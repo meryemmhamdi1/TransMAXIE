@@ -1,17 +1,16 @@
-# @Author : bamtercelboo
-# @Datetime : 2018/9/14 9:51
-# @File : CRF.py
-# @Last Modify Time : 2018/9/14 9:51
-# @Contact : bamtercelboo@{gmail.com, 163.com}
-
 """
   TESTING SYNCING TEST
     FILE :  CRF.py
     FUNCTION : None
     REFERENCE : https://github.com/jiesutd/NCRFpp/blob/master/model/crf.py
+        # @Author : bamtercelboo
+        # @Datetime : 2018/9/14 9:51
+        # @File : CRF.py
+        # @Last Modify Time : 2018/9/14 9:51
+        # @Contact : bamtercelboo@{gmail.com, 163.com}
 """
+
 import torch
-from torch.autograd.variable import Variable
 import torch.nn as nn
 
 
@@ -122,7 +121,6 @@ class CRF(nn.Module):
         Returns:
             xxx
         """
-        #print("feats.size():", feats.size())
         batch_size = feats.size(0)
         seq_len = feats.size(1)
         tag_size = feats.size(2)
@@ -181,7 +179,6 @@ class CRF(nn.Module):
         Returns:
             score:
         """
-        # print(scores.size())
         batch_size = scores.size(1)
         seq_len = scores.size(0)
         tag_size = scores.size(-1)

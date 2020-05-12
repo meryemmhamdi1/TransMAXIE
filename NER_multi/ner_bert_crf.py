@@ -1,6 +1,10 @@
 # %%
-from OnlineAlignment.evaluators import *
 import os
+cwd = os.getcwd()
+import sys
+from pathlib import Path
+sys.path.append(os.path.join(Path(os.getcwd()).parent, "OnlineAlignment"))
+from evaluators import *
 import csv
 import numpy as np
 import os
@@ -14,8 +18,8 @@ import gc
 
 from data_utils import *
 from get_arguments import *
-from OnlineAlignment.losses import *
-from OnlineAlignment.readers import *
+from losses import *
+from readers import *
 from model import *
 from torch.utils.tensorboard import SummaryWriter
 import ast
