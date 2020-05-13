@@ -360,8 +360,7 @@ if __name__ == "__main__":
     pre_model = MODELS_dict[hp.trans_model][0].from_pretrained(MODELS_dict[hp.trans_model][2])
 
     if hp.use_alignment:
-        alignment_dict = hp.alignment_dict
-        alignment_files = ast.literal_eval(alignment_dict)
+        alignment_files = ast.literal_eval(hp.alignment_dict)
     else:
         alignment_files = None
 
