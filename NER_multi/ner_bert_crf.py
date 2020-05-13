@@ -118,8 +118,8 @@ def batch_to_device(batch, target_device):
     return features, labels
 
 
-def load_instrinsic_triplet_data(batch_size, xintr_path, test_langs, train_lang="en", train_max_examples=50000,
-                                 test_max_examples=50000):
+def load_instrinsic_triplet_data(batch_size, xintr_path, test_langs, train_lang="en", train_max_examples=1000000,
+                                 test_max_examples=1000000):
     xintr_reader = XTripletReader(xintr_path, s1_col_idx=0, s2_col_idx=1, s3_col_idx=2, delimiter=',',
                                   quoting=csv.QUOTE_MINIMAL, has_header=True)
 
