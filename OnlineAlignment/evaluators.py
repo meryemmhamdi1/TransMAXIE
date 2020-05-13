@@ -12,7 +12,13 @@ import csv
 from scipy.stats import pearsonr, spearmanr
 import numpy as np
 from enum import Enum
+import os
+cwd = os.getcwd()
+import sys
+from pathlib import Path
+sys.path.append(os.path.join(Path(os.getcwd()).parent, "NER_multi"))
 from ner_bert_crf import *
+
 
 def batch_to_device(batch, target_device: device):
     """
