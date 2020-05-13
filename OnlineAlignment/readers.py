@@ -63,7 +63,9 @@ class XTripletReader(object):
             s2 = row["pos"]
             s3 = row["neg"]
 
-            examples.append(InputExample(guid=filename+str(id), texts=[s1, s2, s3], label=1))
+            if not pandas.isna(s1) and not pandas.isna(s2) and not pandas.isna(s3):
+                examples.append(InputExample(guid=filename+str(id), texts=[s1, s2, s3], label=1))
+
             if max_examples > 0 and len(examples) >= max_examples:
                 break
 
