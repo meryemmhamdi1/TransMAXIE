@@ -92,9 +92,9 @@ def eval(lang, model, iterator, fname):
     metric += '[trigger classification]\tP={:.3f}\tR={:.3f}\tF1={:.3f}\n'.format(trigger_p, trigger_r, trigger_f1)
     metric += '[argument identification]\tP={:.3f}\tR={:.3f}\tF1={:.3f}\n'.format(argument_p_, argument_r_, argument_f1_)
     metric += '[argument classification]\tP={:.3f}\tR={:.3f}\tF1={:.3f}\n'.format(argument_p, argument_r, argument_f1)
-    metric_dict = {"trigger":{"ident": {"p": trigger_p_, "r": trigger_r_, "f1": trigger_f1_},
+    metric_dict = {"trig":{"ident": {"p": trigger_p_, "r": trigger_r_, "f1": trigger_f1_},
                              "class": {"p": trigger_p, "r": trigger_r, "f1": trigger_f1}},
-                   "argument":{"ident": {"p": argument_p_, "r": argument_r_, "f1": argument_f1_},
+                   "arg":{"ident": {"p": argument_p_, "r": argument_r_, "f1": argument_f1_},
                               "class": {"p": argument_p, "r": argument_r, "f1": argument_f1}}}
 
     final = fname + ".P%.2f_R%.2f_F%.2f" % (trigger_p, trigger_r, trigger_f1)

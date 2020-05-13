@@ -1,6 +1,11 @@
 """
 Code adapted from JMEE
 """
+import os
+cwd = os.getcwd()
+import sys
+from pathlib import Path
+sys.path.append(os.path.join(Path(os.getcwd()).parent, "OnlineAlignment"))
 import torch
 import torch.nn as nn
 from torch.nn import init
@@ -105,7 +110,6 @@ class Net(nn.Module):
         )
         self.device = device
 
-        print("trigger_size:", trigger_size)
         kwargs = dict({'target_size': trigger_size, 'device': device, "hidden2label": hidden2label})
         self.tri_CRF1 = CRF(**kwargs)
 
@@ -238,8 +242,6 @@ class Net(nn.Module):
 
 
             positional_sequences = self.get_sentence_positional_feature(BATCH_SIZE, SEQ_LEN)
-            print("SEQ_LEN:", SEQ_LEN)
-            print("adjm:", self.adjm)
             adjm = torch.stack([torch.sparse.FloatTensor(torch.LongTensor(adjmm[0]),
                                                          torch.FloatTensor(adjmm[1]),
                                                          torch.Size([3, SEQ_LEN, SEQ_LEN])).to_dense() for adjmm in self.adjm])

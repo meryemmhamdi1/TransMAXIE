@@ -22,19 +22,26 @@ max_seq_length = 512
 CUTOFF = 50
 
 
-class ACE2005Dataset(data.Dataset):
+class EREDataset(data.Dataset):
     def __init__(self, fpath):
         self.sent_li, self.adjm_li,  self.entities_li, self.postags_li, self.triggers_li, self.arguments_li, self.examples  = [], [], [], [], [], [], []
 
         with open(fpath, 'r') as f:
             data = json.load(f)
+            count = 0
             for item in data:
+                count += 1
                 words = item['words']
                 self.examples.append(words)
                 entities = [[NONE] for _ in range(len(words))]
                 triggers = [NONE] * len(words)
                 if 'pos-tags' in item:
-                    postags = item['pos-tags']
+                    if len(item['pos-tags']) == len(words):
+                        postags = item['pos-tags']
+                    else:
+                        print("------- Detected postags/words mismatch at index:{} for sentence {}"
+                              .format(count, item["sentence"]))
+                        postags = ["NN"] * len(words)
                 else:
                     postags = ["NN"] * len(words)
                 arguments = {
@@ -61,8 +68,8 @@ class ACE2005Dataset(data.Dataset):
                        
                         if len(entities[i]) == 1 and entities[i][0] == NONE:
                             entities[i][0] = entity_type
-                        else:
-                            entities[i].append(entity_type)
+                        #else:
+                        #    entities[i].append(entity_type)
 
                 for event_mention in item['golden-event-mentions']:
                     if event_mention['trigger']['end'] < len(words):
@@ -178,7 +185,7 @@ def generateAdjMatrix(edgeJsonList, length):
 
 class BETTERDataset(data.Dataset):
     def __init__(self, fpath):
-        self.sent_li, self.entities_li, self.postags_li, self.triggers_li, self.arguments_li, self.examples, self.adjm_li = [], [], [], [], [], [], []
+        self.sent_li, self.adjm_li, self.entities_li, self.postags_li, self.triggers_li, self.arguments_li, self.examples = [], [], [], [], [], [], []
         hp = get_args()
 
         if hp.use_full_arg:
@@ -323,7 +330,6 @@ class BETTERDataset(data.Dataset):
             e = [[entity2idx[entity] for entity in entities] for entities in e] #[entity2idx[entity] for entity in e]
 
             tokens_x.extend(tokens_xx), postags_x.extend(p), entities_x.extend(e), is_heads.extend(is_head)
-
         triggers_y = [trigger2idx[t] for t in triggers]
         head_indexes = []
         for i in range(len(is_heads)):
