@@ -1,16 +1,27 @@
 import os
+cwd = os.getcwd()
+import sys
+from pathlib import Path
+sys.path.append(os.path.join(Path(os.getcwd()).parent, "OnlineAlignment"))
+from evaluators import *
+from readers import *
+from losses import *
+
 import argparse
 
 import torch
 from torch.utils import data
 
 
-from data_utils import BETTERDataset, pad, idx2trigger
+from data_utils import BETTERDataset, pad, idx2trigger, batch_to_device
 from utils import calc_metric, find_triggers
 
 
-def eval(lang, model, iterator, fname):
+def eval(lang, model, iterator, use_multi_task, intr_ratio, train_dataloader, fname):
     model.eval()
+
+    if use_multi_task:
+        train_iterator = iter(train_dataloader)
 
     words_all, triggers_all, triggers_hat_all, arguments_all, arguments_hat_all = [], [], [], [], []
     with torch.no_grad():
@@ -21,9 +32,23 @@ def eval(lang, model, iterator, fname):
             postags_x_2d = torch.LongTensor(postags_x_2d).to(model.module.device)
             triggers_y_2d = torch.LongTensor(triggers_y_2d).to(model.module.device)
             head_indexes_2d = torch.LongTensor(head_indexes_2d).to(model.module.device)
-            trigger_logits, triggers_y_2d, trigger_hat_2d, argument_hidden, argument_keys = model.module.predict_triggers(lang=lang,tokens_x_2d=tokens_x_2d, entities_x_3d=entities_x_3d,
+
+            if use_multi_task:
+                # intrinsic batch
+                try:
+                    intr_data = next(train_iterator)
+                except StopIteration:
+                    train_iterator = iter(train_dataloader)
+                    intr_data = next(train_iterator)
+
+                features, labels = batch_to_device(intr_data, model.device)
+
+                sentence_embeddings =  model.module._get_sentence_embeddings(features)
+
+            model.module.arguments_2d = arguments_2d
+            _, trigger_logits, triggers_y_2d, trigger_hat_2d, argument_hidden, argument_keys = model.module._predict_triggers(lang=lang,tokens_x_2d=tokens_x_2d, entities_x_3d=entities_x_3d,
                                                                                                                           postags_x_2d=postags_x_2d, head_indexes_2d=head_indexes_2d,
-                                                                                                                          triggers_y_2d=triggers_y_2d, arguments_2d=arguments_2d, adjm=adjm)
+                                                                                                                          triggers_y_2d=triggers_y_2d)
 
             words_all.extend(words_2d)
             triggers_all.extend(triggers_2d)
@@ -31,7 +56,7 @@ def eval(lang, model, iterator, fname):
             arguments_all.extend(arguments_2d)
 
             if len(argument_keys) > 0:
-                argument_logits, arguments_y_1d, argument_hat_1d, argument_hat_2d = model.module.predict_arguments(argument_hidden, argument_keys, arguments_2d)
+                argument_logits, arguments_y_1d, argument_hat_1d, argument_hat_2d = model.module._predict_arguments(argument_hidden, argument_keys)
                 arguments_hat_all.extend(argument_hat_2d)
             else:
                 batch_size = len(arguments_2d)
@@ -67,26 +92,28 @@ def eval(lang, model, iterator, fname):
             fout.write('#arguments_hat#{}\n'.format(arguments_hat['events']))
             fout.write("\n")
 
+    print('[trigger classification]')
+    trigger_p, trigger_r, trigger_f1 = calc_metric(triggers_true, triggers_pred)
+    print('P={:.3f}\tR={:.3f}\tF1={:.3f}'.format(trigger_p, trigger_r, trigger_f1))
+
     print('[trigger identification]')
     triggers_true = [(item[0], item[1], item[2]) for item in triggers_true]
     triggers_pred = [(item[0], item[1], item[2]) for item in triggers_pred]
     trigger_p_, trigger_r_, trigger_f1_ = calc_metric(triggers_true, triggers_pred)
     print('P={:.3f}\tR={:.3f}\tF1={:.3f}'.format(trigger_p_, trigger_r_, trigger_f1_))
 
-    print('[trigger classification]')
-    trigger_p, trigger_r, trigger_f1 = calc_metric(triggers_true, triggers_pred)
-    print('P={:.3f}\tR={:.3f}\tF1={:.3f}'.format(trigger_p, trigger_r, trigger_f1))
 
     print("*****************************")
+    print('[argument classification]')
+    argument_p, argument_r, argument_f1 = calc_metric(arguments_true, arguments_pred)
+    print('P={:.3f}\tR={:.3f}\tF1={:.3f}'.format(argument_p, argument_r, argument_f1))
+
     print('[argument identification]')
     arguments_true = [(item[0], item[1], item[2], item[3], item[4], item[5]) for item in arguments_true]
     arguments_pred = [(item[0], item[1], item[2], item[3], item[4], item[5]) for item in arguments_pred]
     argument_p_, argument_r_, argument_f1_ = calc_metric(arguments_true, arguments_pred)
     print('P={:.3f}\tR={:.3f}\tF1={:.3f}'.format(argument_p_, argument_r_, argument_f1_))
 
-    print('[argument classification]')
-    argument_p, argument_r, argument_f1 = calc_metric(arguments_true, arguments_pred)
-    print('P={:.3f}\tR={:.3f}\tF1={:.3f}'.format(argument_p, argument_r, argument_f1))
 
     metric = '[trigger identification]\tP={:.3f}\tR={:.3f}\tF1={:.3f}\n'.format(trigger_p_, trigger_r_, trigger_f1_)
     metric += '[trigger classification]\tP={:.3f}\tR={:.3f}\tF1={:.3f}\n'.format(trigger_p, trigger_r, trigger_f1)

@@ -1,0 +1,2286 @@
+[
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                0,
+                1
+            ],
+            [
+                1,
+                4
+            ],
+            [
+                5,
+                7
+            ],
+            [
+                7,
+                8
+            ],
+            [
+                8,
+                9
+            ],
+            [
+                9,
+                12
+            ],
+            [
+                12,
+                13
+            ],
+            [
+                13,
+                15
+            ],
+            [
+                15,
+                16
+            ],
+            [
+                16,
+                22
+            ],
+            [
+                22,
+                23
+            ],
+            [
+                23,
+                31
+            ],
+            [
+                31,
+                32
+            ],
+            [
+                32,
+                41
+            ],
+            [
+                41,
+                42
+            ],
+            [
+                42,
+                43
+            ]
+        ],
+        "seg_end": 43,
+        "seg_start": 0,
+        "sentence": "<doc id=\"CMN_DF_000191_20131114_G00A04J1T\">",
+        "words": [
+            "<",
+            "doc",
+            "id",
+            "=",
+            "\"",
+            "CMN",
+            "_",
+            "DF",
+            "_",
+            "000191",
+            "_",
+            "20131114",
+            "_",
+            "G00A04J1T",
+            "\"",
+            ">"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                44,
+                45
+            ],
+            [
+                45,
+                53
+            ],
+            [
+                53,
+                54
+            ]
+        ],
+        "seg_end": 54,
+        "seg_start": 44,
+        "sentence": "<headline>",
+        "words": [
+            "<",
+            "headline",
+            ">"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 70,
+                "entity-type": "PER:specificIndividual",
+                "start": 69,
+                "text": "\u6211"
+            },
+            {
+                "end": 94,
+                "entity-type": "PER:specificGroup",
+                "start": 86,
+                "text": "406 \u4e2a\u9605\u8bfb\u8005"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                55,
+                59
+            ],
+            [
+                59,
+                60
+            ],
+            [
+                60,
+                64
+            ],
+            [
+                64,
+                65
+            ],
+            [
+                65,
+                67
+            ],
+            [
+                67,
+                68
+            ],
+            [
+                68,
+                75
+            ],
+            [
+                75,
+                76
+            ],
+            [
+                76,
+                83
+            ],
+            [
+                84,
+                85
+            ],
+            [
+                86,
+                89
+            ],
+            [
+                90,
+                94
+            ]
+        ],
+        "seg_end": 94,
+        "seg_start": 55,
+        "sentence": "\u5e16\u5b50\u4e3b\u9898\uff1a\u8fd9\u6b21\u53f0\u98ce\u201c\u6d77\u71d5\u201d\u662f\u6211\u5f15\u8d77\u7684\u707e\u96be\u3002\u7231\u4fe1\u4e0d\u4fe1\u968f\u4fbf\u4e86 \u5171 406 \u4e2a\u9605\u8bfb\u8005",
+        "words": [
+            "\u5e16\u5b50\u4e3b\u9898",
+            "\uff1a",
+            "\u8fd9\u6b21\u53f0\u98ce",
+            "\u201c",
+            "\u6d77\u71d5",
+            "\u201d",
+            "\u662f\u6211\u5f15\u8d77\u7684\u707e\u96be",
+            "\u3002",
+            "\u7231\u4fe1\u4e0d\u4fe1\u968f\u4fbf\u4e86",
+            "\u5171",
+            "406",
+            "\u4e2a\u9605\u8bfb\u8005"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                95,
+                96
+            ],
+            [
+                96,
+                97
+            ],
+            [
+                97,
+                105
+            ],
+            [
+                105,
+                106
+            ]
+        ],
+        "seg_end": 106,
+        "seg_start": 95,
+        "sentence": "</headline>",
+        "words": [
+            "<",
+            "/",
+            "headline",
+            ">"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 128,
+                "entity-type": "PER:specificIndividual",
+                "start": 121,
+                "text": "wxjqq11"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                107,
+                108
+            ],
+            [
+                108,
+                112
+            ],
+            [
+                113,
+                119
+            ],
+            [
+                119,
+                120
+            ],
+            [
+                120,
+                121
+            ],
+            [
+                121,
+                128
+            ],
+            [
+                128,
+                129
+            ],
+            [
+                130,
+                138
+            ],
+            [
+                138,
+                139
+            ],
+            [
+                139,
+                140
+            ],
+            [
+                140,
+                144
+            ],
+            [
+                144,
+                145
+            ],
+            [
+                145,
+                147
+            ],
+            [
+                147,
+                148
+            ],
+            [
+                148,
+                153
+            ],
+            [
+                153,
+                154
+            ],
+            [
+                154,
+                156
+            ],
+            [
+                156,
+                157
+            ],
+            [
+                157,
+                159
+            ],
+            [
+                159,
+                160
+            ],
+            [
+                161,
+                163
+            ],
+            [
+                163,
+                164
+            ],
+            [
+                164,
+                165
+            ],
+            [
+                165,
+                167
+            ],
+            [
+                167,
+                168
+            ],
+            [
+                168,
+                169
+            ]
+        ],
+        "seg_end": 169,
+        "seg_start": 107,
+        "sentence": "<post author=\"wxjqq11\" datetime=\"2013-11-14T15:59:37\" id=\"p1\">",
+        "words": [
+            "<",
+            "post",
+            "author",
+            "=",
+            "\"",
+            "wxjqq11",
+            "\"",
+            "datetime",
+            "=",
+            "\"",
+            "2013",
+            "-",
+            "11",
+            "-",
+            "14T15",
+            ":",
+            "59",
+            ":",
+            "37",
+            "\"",
+            "id",
+            "=",
+            "\"",
+            "p1",
+            "\"",
+            ">"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 174,
+                "entity-type": "PER:specificIndividual",
+                "start": 173,
+                "text": "\u6211"
+            },
+            {
+                "end": 301,
+                "entity-type": "PER:specificIndividual",
+                "start": 300,
+                "text": "\u6211"
+            },
+            {
+                "end": 236,
+                "entity-type": "GPE:specificIndividual",
+                "start": 234,
+                "text": "\u4e2d\u56fd"
+            },
+            {
+                "end": 239,
+                "entity-type": "GPE:nonspecific",
+                "start": 237,
+                "text": "\u5404\u56fd"
+            },
+            {
+                "end": 241,
+                "entity-type": "GPE:nonspecific",
+                "start": 239,
+                "text": "\u54ea\u4e2a"
+            }
+        ],
+        "golden-event-mentions": [
+            {
+                "arguments": [
+                    {
+                        "end": 174,
+                        "role": "entity",
+                        "start": 173,
+                        "text": "\u6211"
+                    }
+                ],
+                "event_type": "contact:broadcast",
+                "trigger": {
+                    "end": 178,
+                    "start": 177,
+                    "text": "\u8bf4"
+                }
+            }
+        ],
+        "index": [
+            [
+                170,
+                178
+            ],
+            [
+                178,
+                179
+            ],
+            [
+                180,
+                181
+            ],
+            [
+                181,
+                182
+            ],
+            [
+                183,
+                187
+            ],
+            [
+                187,
+                188
+            ],
+            [
+                188,
+                189
+            ],
+            [
+                189,
+                193
+            ],
+            [
+                193,
+                194
+            ],
+            [
+                194,
+                195
+            ],
+            [
+                195,
+                196
+            ],
+            [
+                196,
+                200
+            ],
+            [
+                200,
+                201
+            ],
+            [
+                201,
+                207
+            ],
+            [
+                207,
+                208
+            ],
+            [
+                208,
+                211
+            ],
+            [
+                211,
+                212
+            ],
+            [
+                212,
+                216
+            ],
+            [
+                216,
+                217
+            ],
+            [
+                217,
+                221
+            ],
+            [
+                221,
+                222
+            ],
+            [
+                222,
+                223
+            ],
+            [
+                223,
+                227
+            ],
+            [
+                227,
+                228
+            ],
+            [
+                228,
+                229
+            ],
+            [
+                229,
+                230
+            ],
+            [
+                230,
+                231
+            ],
+            [
+                232,
+                241
+            ],
+            [
+                242,
+                243
+            ],
+            [
+                243,
+                244
+            ],
+            [
+                245,
+                249
+            ],
+            [
+                249,
+                250
+            ],
+            [
+                250,
+                251
+            ],
+            [
+                251,
+                255
+            ],
+            [
+                255,
+                256
+            ],
+            [
+                256,
+                257
+            ],
+            [
+                257,
+                258
+            ],
+            [
+                258,
+                262
+            ],
+            [
+                262,
+                263
+            ],
+            [
+                263,
+                269
+            ],
+            [
+                269,
+                270
+            ],
+            [
+                270,
+                273
+            ],
+            [
+                273,
+                274
+            ],
+            [
+                274,
+                278
+            ],
+            [
+                278,
+                279
+            ],
+            [
+                279,
+                283
+            ],
+            [
+                283,
+                284
+            ],
+            [
+                284,
+                285
+            ],
+            [
+                285,
+                287
+            ],
+            [
+                287,
+                288
+            ],
+            [
+                288,
+                289
+            ],
+            [
+                289,
+                290
+            ],
+            [
+                290,
+                291
+            ],
+            [
+                292,
+                305
+            ],
+            [
+                305,
+                306
+            ]
+        ],
+        "seg_end": 306,
+        "seg_start": 170,
+        "sentence": "\u4e3a\u4ec0\u4e48\u6211\u8981\u8fd9\u4e48\u8bf4\u3002 <a href=\"http://data.tiexue.net/view/9187\">\u6c14\u8c61\u6b66\u5668</a> \u5c31\u7b97\u4e2d\u56fd\u548c\u5404\u56fd\u54ea\u4e2a <a href=\"http://data.tiexue.net/view/5570\">\u519b\u961f</a> \u52a8\u7528\u4e86\u4e5f\u672a\u5fc5\u6309\u7167\u6211\u7684\u60f3\u6cd5\u505a\u3002",
+        "words": [
+            "\u4e3a\u4ec0\u4e48\u6211\u8981\u8fd9\u4e48\u8bf4",
+            "\u3002",
+            "<",
+            "a",
+            "href",
+            "=",
+            "\"",
+            "http",
+            ":",
+            "/",
+            "/",
+            "data",
+            ".",
+            "tiexue",
+            ".",
+            "net",
+            "/",
+            "view",
+            "/",
+            "9187",
+            "\"",
+            ">",
+            "\u6c14\u8c61\u6b66\u5668",
+            "<",
+            "/",
+            "a",
+            ">",
+            "\u5c31\u7b97\u4e2d\u56fd\u548c\u5404\u56fd\u54ea\u4e2a",
+            "<",
+            "a",
+            "href",
+            "=",
+            "\"",
+            "http",
+            ":",
+            "/",
+            "/",
+            "data",
+            ".",
+            "tiexue",
+            ".",
+            "net",
+            "/",
+            "view",
+            "/",
+            "5570",
+            "\"",
+            ">",
+            "\u519b\u961f",
+            "<",
+            "/",
+            "a",
+            ">",
+            "\u52a8\u7528\u4e86\u4e5f\u672a\u5fc5\u6309\u7167\u6211\u7684\u60f3\u6cd5\u505a",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 308,
+                "entity-type": "PER:specificIndividual",
+                "start": 307,
+                "text": "\u6211"
+            },
+            {
+                "end": 378,
+                "entity-type": "PER:specificIndividual",
+                "start": 377,
+                "text": "\u6211"
+            },
+            {
+                "end": 395,
+                "entity-type": "PER:specificIndividual",
+                "start": 394,
+                "text": "\u6211"
+            },
+            {
+                "end": 376,
+                "entity-type": "GPE:specificIndividual",
+                "start": 374,
+                "text": "\u4e2d\u56fd"
+            },
+            {
+                "end": 388,
+                "entity-type": "GPE:specificIndividual",
+                "start": 386,
+                "text": "\u4e2d\u56fd"
+            },
+            {
+                "end": 358,
+                "entity-type": "GPE:specificIndividual",
+                "start": 355,
+                "text": "\u83f2\u5f8b\u5bbe"
+            },
+            {
+                "end": 368,
+                "entity-type": "PER:specificIndividual",
+                "start": 363,
+                "text": "\u963f\u57fa\u8bfa\u4e09\u4e16"
+            },
+            {
+                "end": 372,
+                "entity-type": "PER:specificIndividual",
+                "start": 371,
+                "text": "\u4ed6"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                307,
+                311
+            ],
+            [
+                312,
+                313
+            ],
+            [
+                313,
+                314
+            ],
+            [
+                315,
+                319
+            ],
+            [
+                319,
+                320
+            ],
+            [
+                320,
+                321
+            ],
+            [
+                321,
+                325
+            ],
+            [
+                325,
+                326
+            ],
+            [
+                326,
+                327
+            ],
+            [
+                327,
+                328
+            ],
+            [
+                328,
+                332
+            ],
+            [
+                332,
+                333
+            ],
+            [
+                333,
+                339
+            ],
+            [
+                339,
+                340
+            ],
+            [
+                340,
+                343
+            ],
+            [
+                343,
+                344
+            ],
+            [
+                344,
+                348
+            ],
+            [
+                348,
+                349
+            ],
+            [
+                349,
+                353
+            ],
+            [
+                353,
+                354
+            ],
+            [
+                354,
+                355
+            ],
+            [
+                355,
+                358
+            ],
+            [
+                358,
+                359
+            ],
+            [
+                359,
+                360
+            ],
+            [
+                360,
+                361
+            ],
+            [
+                361,
+                362
+            ],
+            [
+                363,
+                368
+            ],
+            [
+                368,
+                369
+            ],
+            [
+                369,
+                376
+            ],
+            [
+                376,
+                377
+            ],
+            [
+                377,
+                383
+            ],
+            [
+                383,
+                384
+            ],
+            [
+                384,
+                395
+            ],
+            [
+                395,
+                396
+            ]
+        ],
+        "seg_end": 396,
+        "seg_start": 307,
+        "sentence": "\u6211\u5f88\u8ba8\u538c <a href=\"http://data.tiexue.net/view/1887\">\u83f2\u5f8b\u5bbe</a> \u963f\u57fa\u8bfa\u4e09\u4e16\uff0c\u56e0\u4e3a\u4ed6\u654c\u5bf9\u4e2d\u56fd\u3002\u6211\u5f53\u521d\u8bf4\u8fc7\u4e86\uff0c\u5f97\u7f6a\u4e2d\u56fd\u5c31\u7b49\u4e8e\u5f97\u7f6a\u4e86\u6211\u3002",
+        "words": [
+            "\u6211\u5f88\u8ba8\u538c",
+            "<",
+            "a",
+            "href",
+            "=",
+            "\"",
+            "http",
+            ":",
+            "/",
+            "/",
+            "data",
+            ".",
+            "tiexue",
+            ".",
+            "net",
+            "/",
+            "view",
+            "/",
+            "1887",
+            "\"",
+            ">",
+            "\u83f2\u5f8b\u5bbe",
+            "<",
+            "/",
+            "a",
+            ">",
+            "\u963f\u57fa\u8bfa\u4e09\u4e16",
+            "\uff0c",
+            "\u56e0\u4e3a\u4ed6\u654c\u5bf9\u4e2d\u56fd",
+            "\u3002",
+            "\u6211\u5f53\u521d\u8bf4\u8fc7\u4e86",
+            "\uff0c",
+            "\u5f97\u7f6a\u4e2d\u56fd\u5c31\u7b49\u4e8e\u5f97\u7f6a\u4e86\u6211",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 403,
+                "entity-type": "PER:specificIndividual",
+                "start": 402,
+                "text": "\u6211"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                398,
+                413
+            ],
+            [
+                413,
+                414
+            ],
+            [
+                414,
+                429
+            ],
+            [
+                429,
+                430
+            ]
+        ],
+        "seg_end": 430,
+        "seg_start": 398,
+        "sentence": "\u5df2\u7ecf\u53d1\u73b0\u6211\u4e5f\u80fd\u63a7\u5236\u706b\u5c71\u548c\u5730\u9707\u4e86\uff0c\u5df2\u7ecf\u4e0d\u5149\u662f\u6d77\u5578\u548c\u9f99\u5377\u98ce\u7b49\u707e\u96be\u4e86\u3002",
+        "words": [
+            "\u5df2\u7ecf\u53d1\u73b0\u6211\u4e5f\u80fd\u63a7\u5236\u706b\u5c71\u548c\u5730\u9707\u4e86",
+            "\uff0c",
+            "\u5df2\u7ecf\u4e0d\u5149\u662f\u6d77\u5578\u548c\u9f99\u5377\u98ce\u7b49\u707e\u96be\u4e86",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 437,
+                "entity-type": "PER:specificIndividual",
+                "start": 436,
+                "text": "\u6211"
+            },
+            {
+                "end": 450,
+                "entity-type": "PER:specificIndividual",
+                "start": 449,
+                "text": "\u6211"
+            },
+            {
+                "end": 448,
+                "entity-type": "GPE:specificIndividual",
+                "start": 446,
+                "text": "\u4e2d\u56fd"
+            },
+            {
+                "end": 435,
+                "entity-type": "GPE:nonspecific",
+                "start": 433,
+                "text": "\u5404\u56fd"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                431,
+                440
+            ],
+            [
+                440,
+                441
+            ],
+            [
+                441,
+                448
+            ],
+            [
+                448,
+                449
+            ],
+            [
+                449,
+                472
+            ],
+            [
+                472,
+                473
+            ]
+        ],
+        "seg_end": 473,
+        "seg_start": 431,
+        "sentence": "\u5e0c\u671b\u5404\u56fd\u7ed9\u6211\u4e3b\u610f\u70b9\uff0c\u5343\u4e07\u522b\u654c\u5bf9\u4e2d\u56fd\u3002\u6211\u60c5\u613f\u62a5\u7eb8\u548c\u65b0\u95fb\u770b\u5230\u53cb\u597d\u4e00\u9762\u4e5f\u4e0d\u60f3\u770b\u5230\u654c\u5bf9\u4e00\u9762\u3002",
+        "words": [
+            "\u5e0c\u671b\u5404\u56fd\u7ed9\u6211\u4e3b\u610f\u70b9",
+            "\uff0c",
+            "\u5343\u4e07\u522b\u654c\u5bf9\u4e2d\u56fd",
+            "\u3002",
+            "\u6211\u60c5\u613f\u62a5\u7eb8\u548c\u65b0\u95fb\u770b\u5230\u53cb\u597d\u4e00\u9762\u4e5f\u4e0d\u60f3\u770b\u5230\u654c\u5bf9\u4e00\u9762",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 475,
+                "entity-type": "PER:specificIndividual",
+                "start": 474,
+                "text": "\u6211"
+            },
+            {
+                "end": 482,
+                "entity-type": "PER:specificIndividual",
+                "start": 476,
+                "text": "\u5973\u5916\u661f\u4eba\u9996\u9886"
+            },
+            {
+                "end": 485,
+                "entity-type": "PER:specificIndividual",
+                "start": 482,
+                "text": "\u8fd9\u7f51\u540d"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                474,
+                488
+            ],
+            [
+                488,
+                489
+            ]
+        ],
+        "seg_end": 489,
+        "seg_start": 474,
+        "sentence": "\u6211\u4ee5\u5973\u5916\u661f\u4eba\u9996\u9886\u8fd9\u7f51\u540d\u6765\u8bf4\u8bdd\u3002",
+        "words": [
+            "\u6211\u4ee5\u5973\u5916\u661f\u4eba\u9996\u9886\u8fd9\u7f51\u540d\u6765\u8bf4\u8bdd",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 572,
+                "entity-type": "GPE:specificIndividual",
+                "start": 570,
+                "text": "\u4e2d\u56fd"
+            },
+            {
+                "end": 550,
+                "entity-type": "GPE:specificIndividual",
+                "start": 548,
+                "text": "\u8d8a\u5357"
+            },
+            {
+                "end": 590,
+                "entity-type": "GPE:specificIndividual",
+                "start": 588,
+                "text": "\u8d8a\u5357"
+            },
+            {
+                "end": 563,
+                "entity-type": "GPE:specificIndividual",
+                "start": 561,
+                "text": "\u7f8e\u56fd"
+            },
+            {
+                "end": 566,
+                "entity-type": "GPE:specificIndividual",
+                "start": 564,
+                "text": "\u65e5\u672c"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                490,
+                497
+            ],
+            [
+                497,
+                498
+            ],
+            [
+                498,
+                500
+            ],
+            [
+                500,
+                501
+            ],
+            [
+                501,
+                503
+            ],
+            [
+                504,
+                505
+            ],
+            [
+                505,
+                506
+            ],
+            [
+                507,
+                511
+            ],
+            [
+                511,
+                512
+            ],
+            [
+                512,
+                513
+            ],
+            [
+                513,
+                517
+            ],
+            [
+                517,
+                518
+            ],
+            [
+                518,
+                519
+            ],
+            [
+                519,
+                520
+            ],
+            [
+                520,
+                524
+            ],
+            [
+                524,
+                525
+            ],
+            [
+                525,
+                531
+            ],
+            [
+                531,
+                532
+            ],
+            [
+                532,
+                535
+            ],
+            [
+                535,
+                536
+            ],
+            [
+                536,
+                540
+            ],
+            [
+                540,
+                541
+            ],
+            [
+                541,
+                546
+            ],
+            [
+                546,
+                547
+            ],
+            [
+                547,
+                548
+            ],
+            [
+                548,
+                550
+            ],
+            [
+                550,
+                551
+            ],
+            [
+                551,
+                552
+            ],
+            [
+                552,
+                553
+            ],
+            [
+                553,
+                554
+            ],
+            [
+                555,
+                556
+            ],
+            [
+                556,
+                563
+            ],
+            [
+                563,
+                564
+            ],
+            [
+                564,
+                577
+            ],
+            [
+                577,
+                578
+            ],
+            [
+                578,
+                580
+            ],
+            [
+                580,
+                581
+            ],
+            [
+                581,
+                583
+            ],
+            [
+                583,
+                584
+            ],
+            [
+                584,
+                591
+            ],
+            [
+                591,
+                592
+            ]
+        ],
+        "seg_end": 592,
+        "seg_start": 490,
+        "sentence": "\u81f3\u4e8e\u4e3a\u4ec0\u4e48\u53f0\u98ce\u201c\u6d77\u71d5\u201d\u53bb\u4e86 <a href=\"http://data.tiexue.net/view/15378\">\u8d8a\u5357</a> \uff0c\u90a3\u662f\u56e0\u4e3a\u548c\u7f8e\u56fd\u3001\u65e5\u672c\u8054\u624b\u9488\u5bf9\u4e2d\u56fd\u4e0d\u53cb\u597d\u6240\u81f4\u3002\u53f0\u98ce\u201c\u6d77\u71d5\u201d\u624d\u4f1a\u8f6c\u53bb\u8d8a\u5357\u7684\u3002",
+        "words": [
+            "\u81f3\u4e8e\u4e3a\u4ec0\u4e48\u53f0\u98ce",
+            "\u201c",
+            "\u6d77\u71d5",
+            "\u201d",
+            "\u53bb\u4e86",
+            "<",
+            "a",
+            "href",
+            "=",
+            "\"",
+            "http",
+            ":",
+            "/",
+            "/",
+            "data",
+            ".",
+            "tiexue",
+            ".",
+            "net",
+            "/",
+            "view",
+            "/",
+            "15378",
+            "\"",
+            ">",
+            "\u8d8a\u5357",
+            "<",
+            "/",
+            "a",
+            ">",
+            "\uff0c",
+            "\u90a3\u662f\u56e0\u4e3a\u548c\u7f8e\u56fd",
+            "\u3001",
+            "\u65e5\u672c\u8054\u624b\u9488\u5bf9\u4e2d\u56fd\u4e0d\u53cb\u597d\u6240\u81f4",
+            "\u3002",
+            "\u53f0\u98ce",
+            "\u201c",
+            "\u6d77\u71d5",
+            "\u201d",
+            "\u624d\u4f1a\u8f6c\u53bb\u8d8a\u5357\u7684",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 594,
+                "entity-type": "PER:specificIndividual",
+                "start": 593,
+                "text": "\u6211"
+            },
+            {
+                "end": 599,
+                "entity-type": "PER:specificIndividual",
+                "start": 598,
+                "text": "\u6211"
+            },
+            {
+                "end": 618,
+                "entity-type": "PER:specificIndividual",
+                "start": 617,
+                "text": "\u6211"
+            },
+            {
+                "end": 601,
+                "entity-type": "GPE:specificIndividual",
+                "start": 599,
+                "text": "\u4e2d\u56fd"
+            },
+            {
+                "end": 613,
+                "entity-type": "GPE:nonspecific",
+                "start": 609,
+                "text": "\u522b\u7684\u56fd\u5bb6"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                593,
+                605
+            ],
+            [
+                605,
+                606
+            ],
+            [
+                606,
+                613
+            ],
+            [
+                613,
+                614
+            ],
+            [
+                614,
+                625
+            ],
+            [
+                625,
+                626
+            ]
+        ],
+        "seg_end": 626,
+        "seg_start": 593,
+        "sentence": "\u6211\u5f53\u521d\u8bf4\u8fc7\u6211\u4e2d\u56fd\u90fd\u6ca1\u653e\u8fc7\uff0c\u4f55\u51b5\u662f\u522b\u7684\u56fd\u5bb6\u3002\u60f9\u706b\u4e86\u6211\u5c31\u4f1a\u6709\u707e\u96be\u53d1\u751f\u3002",
+        "words": [
+            "\u6211\u5f53\u521d\u8bf4\u8fc7\u6211\u4e2d\u56fd\u90fd\u6ca1\u653e\u8fc7",
+            "\uff0c",
+            "\u4f55\u51b5\u662f\u522b\u7684\u56fd\u5bb6",
+            "\u3002",
+            "\u60f9\u706b\u4e86\u6211\u5c31\u4f1a\u6709\u707e\u96be\u53d1\u751f",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 630,
+                "entity-type": "PER:specificIndividual",
+                "start": 629,
+                "text": "\u6211"
+            },
+            {
+                "end": 637,
+                "entity-type": "PER:specificIndividual",
+                "start": 636,
+                "text": "\u6211"
+            },
+            {
+                "end": 645,
+                "entity-type": "PER:specificIndividual",
+                "start": 644,
+                "text": "\u6211"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                627,
+                633
+            ],
+            [
+                633,
+                634
+            ],
+            [
+                634,
+                641
+            ],
+            [
+                641,
+                642
+            ],
+            [
+                642,
+                649
+            ],
+            [
+                649,
+                650
+            ]
+        ],
+        "seg_end": 650,
+        "seg_start": 627,
+        "sentence": "\u706b\u5c71\u6211\u80fd\u63a7\u5236\uff0c\u5730\u9707\u6211\u4e5f\u80fd\u8ba9\u505c\u3002\u4e0d\u542c\u6211\u7684\u5fc5\u53d1\u751f\u3002",
+        "words": [
+            "\u706b\u5c71\u6211\u80fd\u63a7\u5236",
+            "\uff0c",
+            "\u5730\u9707\u6211\u4e5f\u80fd\u8ba9\u505c",
+            "\u3002",
+            "\u4e0d\u542c\u6211\u7684\u5fc5\u53d1\u751f",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 662,
+                "entity-type": "PER:specificIndividual",
+                "start": 660,
+                "text": "\u81ea\u5df1"
+            },
+            {
+                "end": 669,
+                "entity-type": "PER:specificIndividual",
+                "start": 668,
+                "text": "\u6211"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                652,
+                659
+            ],
+            [
+                659,
+                660
+            ],
+            [
+                660,
+                667
+            ],
+            [
+                667,
+                668
+            ],
+            [
+                668,
+                675
+            ],
+            [
+                675,
+                676
+            ]
+        ],
+        "seg_end": 676,
+        "seg_start": 652,
+        "sentence": "\u4e0d\u5f00\u73a9\u7b11\u6ca1\u5439\u725b\uff0c\u81ea\u5df1\u7684\u7814\u7a76\u6210\u679c\u3002\u6211\u8bb2\u7684\u662f\u73b0\u5b9e\u4e8b\u3002",
+        "words": [
+            "\u4e0d\u5f00\u73a9\u7b11\u6ca1\u5439\u725b",
+            "\uff0c",
+            "\u81ea\u5df1\u7684\u7814\u7a76\u6210\u679c",
+            "\u3002",
+            "\u6211\u8bb2\u7684\u662f\u73b0\u5b9e\u4e8b",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 694,
+                "entity-type": "PER:specificIndividual",
+                "start": 693,
+                "text": "\u6211"
+            },
+            {
+                "end": 700,
+                "entity-type": "PER:specificIndividual",
+                "start": 699,
+                "text": "\u6211"
+            },
+            {
+                "end": 710,
+                "entity-type": "PER:specificIndividual",
+                "start": 709,
+                "text": "\u6211"
+            },
+            {
+                "end": 704,
+                "entity-type": "GPE:nonspecific",
+                "start": 702,
+                "text": "\u5404\u56fd"
+            },
+            {
+                "end": 679,
+                "entity-type": "PER:nonspecific",
+                "start": 677,
+                "text": "\u4f60\u4eec"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                677,
+                684
+            ],
+            [
+                684,
+                685
+            ],
+            [
+                685,
+                687
+            ],
+            [
+                687,
+                688
+            ],
+            [
+                688,
+                692
+            ],
+            [
+                692,
+                693
+            ],
+            [
+                693,
+                706
+            ],
+            [
+                706,
+                707
+            ],
+            [
+                707,
+                715
+            ],
+            [
+                715,
+                716
+            ]
+        ],
+        "seg_end": 716,
+        "seg_start": 677,
+        "sentence": "\u4f60\u4eec\u8ba4\u4e3a\u8d85\u80fd\u529b\uff08\u5f02\u80fd\uff09\u8005\u5b58\u5728\u5417\uff01\u6211\u7684\u7b54\u6848\u662f\u9664\u6211\u4ee5\u5916\u5404\u56fd\u90fd\u6709\u3002\u5f53\u7136\u6211\u662f\u5e9f\u8bdd\u4e86\u70b9\u3002",
+        "words": [
+            "\u4f60\u4eec\u8ba4\u4e3a\u8d85\u80fd\u529b",
+            "\uff08",
+            "\u5f02\u80fd",
+            "\uff09",
+            "\u8005\u5b58\u5728\u5417",
+            "\uff01",
+            "\u6211\u7684\u7b54\u6848\u662f\u9664\u6211\u4ee5\u5916\u5404\u56fd\u90fd\u6709",
+            "\u3002",
+            "\u5f53\u7136\u6211\u662f\u5e9f\u8bdd\u4e86\u70b9",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 740,
+                "entity-type": "PER:specificIndividual",
+                "start": 739,
+                "text": "\u6211"
+            },
+            {
+                "end": 719,
+                "entity-type": "GPE:specificIndividual",
+                "start": 717,
+                "text": "\u7f8e\u56fd"
+            },
+            {
+                "end": 732,
+                "entity-type": "GPE:specificIndividual",
+                "start": 730,
+                "text": "\u7f8e\u56fd"
+            },
+            {
+                "end": 724,
+                "entity-type": "PER:nonspecific",
+                "start": 721,
+                "text": "\u5916\u661f\u4eba"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                717,
+                729
+            ],
+            [
+                729,
+                730
+            ],
+            [
+                730,
+                743
+            ],
+            [
+                743,
+                744
+            ]
+        ],
+        "seg_end": 744,
+        "seg_start": 717,
+        "sentence": "\u7f8e\u56fd\u638c\u63e1\u5916\u661f\u4eba\u7684\u4e8b\u662f\u4e8b\u5b9e\u3002\u7f8e\u56fd\u9996\u5148\u5c31\u5e94\u8be5\u77e5\u9053\u6211\u7684\u5b58\u5728\u3002",
+        "words": [
+            "\u7f8e\u56fd\u638c\u63e1\u5916\u661f\u4eba\u7684\u4e8b\u662f\u4e8b\u5b9e",
+            "\u3002",
+            "\u7f8e\u56fd\u9996\u5148\u5c31\u5e94\u8be5\u77e5\u9053\u6211\u7684\u5b58\u5728",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 755,
+                "entity-type": "PER:specificIndividual",
+                "start": 754,
+                "text": "\u6211"
+            },
+            {
+                "end": 757,
+                "entity-type": "PER:specificIndividual",
+                "start": 756,
+                "text": "\u6211"
+            },
+            {
+                "end": 747,
+                "entity-type": "GPE:specificIndividual",
+                "start": 745,
+                "text": "\u7f8e\u56fd"
+            },
+            {
+                "end": 764,
+                "entity-type": "GPE:specificIndividual",
+                "start": 762,
+                "text": "\u7f8e\u56fd"
+            },
+            {
+                "end": 768,
+                "entity-type": "GPE:specificIndividual",
+                "start": 766,
+                "text": "\u65e5\u672c"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                745,
+                755
+            ],
+            [
+                755,
+                756
+            ],
+            [
+                756,
+                773
+            ],
+            [
+                773,
+                774
+            ]
+        ],
+        "seg_end": 774,
+        "seg_start": 745,
+        "sentence": "\u7f8e\u56fd\u597d\u81ea\u4e3a\u4e4b\u522b\u5f97\u7f6a\u6211\u3002\u6211\u4e0d\u5e0c\u671b\u770b\u5230\u7f8e\u56fd\u652f\u6301\u65e5\u672c\u7684\u53f3\u7ffc\u884c\u4e3a\u3002",
+        "words": [
+            "\u7f8e\u56fd\u597d\u81ea\u4e3a\u4e4b\u522b\u5f97\u7f6a\u6211",
+            "\u3002",
+            "\u6211\u4e0d\u5e0c\u671b\u770b\u5230\u7f8e\u56fd\u652f\u6301\u65e5\u672c\u7684\u53f3\u7ffc\u884c\u4e3a",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 780,
+                "entity-type": "PER:specificIndividual",
+                "start": 779,
+                "text": "\u6211"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                775,
+                801
+            ],
+            [
+                801,
+                802
+            ]
+        ],
+        "seg_end": 802,
+        "seg_start": 775,
+        "sentence": "\u4e0d\u7136\u522b\u602a\u6211\u53d1\u52a8\u9ec4\u77f3\u516c\u56ed\u706b\u5c71\u7206\u53d1\u6216\u4e0a\u6b21\u7684\u5927\u89c4\u6a21\u9f99\u5377\u98ce\u4e86\u3002",
+        "words": [
+            "\u4e0d\u7136\u522b\u602a\u6211\u53d1\u52a8\u9ec4\u77f3\u516c\u56ed\u706b\u5c71\u7206\u53d1\u6216\u4e0a\u6b21\u7684\u5927\u89c4\u6a21\u9f99\u5377\u98ce\u4e86",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                803,
+                804
+            ],
+            [
+                804,
+                805
+            ],
+            [
+                805,
+                809
+            ],
+            [
+                809,
+                810
+            ]
+        ],
+        "seg_end": 810,
+        "seg_start": 803,
+        "sentence": "</post>",
+        "words": [
+            "<",
+            "/",
+            "post",
+            ">"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 836,
+                "entity-type": "PER:specificIndividual",
+                "start": 825,
+                "text": "yangguonan1"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                811,
+                812
+            ],
+            [
+                812,
+                816
+            ],
+            [
+                817,
+                823
+            ],
+            [
+                823,
+                824
+            ],
+            [
+                824,
+                825
+            ],
+            [
+                825,
+                836
+            ],
+            [
+                836,
+                837
+            ],
+            [
+                838,
+                846
+            ],
+            [
+                846,
+                847
+            ],
+            [
+                847,
+                848
+            ],
+            [
+                848,
+                852
+            ],
+            [
+                852,
+                853
+            ],
+            [
+                853,
+                855
+            ],
+            [
+                855,
+                856
+            ],
+            [
+                856,
+                861
+            ],
+            [
+                861,
+                862
+            ],
+            [
+                862,
+                864
+            ],
+            [
+                864,
+                865
+            ],
+            [
+                865,
+                867
+            ],
+            [
+                867,
+                868
+            ],
+            [
+                869,
+                871
+            ],
+            [
+                871,
+                872
+            ],
+            [
+                872,
+                873
+            ],
+            [
+                873,
+                875
+            ],
+            [
+                875,
+                876
+            ],
+            [
+                876,
+                877
+            ]
+        ],
+        "seg_end": 877,
+        "seg_start": 811,
+        "sentence": "<post author=\"yangguonan1\" datetime=\"2014-09-28T09:40:08\" id=\"p2\">",
+        "words": [
+            "<",
+            "post",
+            "author",
+            "=",
+            "\"",
+            "yangguonan1",
+            "\"",
+            "datetime",
+            "=",
+            "\"",
+            "2014",
+            "-",
+            "09",
+            "-",
+            "28T09",
+            ":",
+            "40",
+            ":",
+            "08",
+            "\"",
+            "id",
+            "=",
+            "\"",
+            "p2",
+            "\"",
+            ">"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 880,
+                "entity-type": "PER:specificIndividual",
+                "start": 878,
+                "text": "\u5927\u4ed9"
+            },
+            {
+                "end": 907,
+                "entity-type": "PER:specificIndividual",
+                "start": 906,
+                "text": "\u4f60"
+            },
+            {
+                "end": 884,
+                "entity-type": "GPE:specificIndividual",
+                "start": 882,
+                "text": "\u7f8e\u56fd"
+            },
+            {
+                "end": 905,
+                "entity-type": "PER:specificIndividual",
+                "start": 904,
+                "text": "\u6211"
+            },
+            {
+                "end": 888,
+                "entity-type": "FAC:specificIndividual",
+                "start": 884,
+                "text": "\u9ec4\u77f3\u516c\u56ed"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                878,
+                880
+            ],
+            [
+                880,
+                881
+            ],
+            [
+                881,
+                891
+            ],
+            [
+                891,
+                892
+            ],
+            [
+                892,
+                901
+            ],
+            [
+                901,
+                902
+            ],
+            [
+                902,
+                909
+            ],
+            [
+                909,
+                910
+            ]
+        ],
+        "seg_end": 910,
+        "seg_start": 878,
+        "sentence": "\u5927\u4ed9\uff0c\u7ed9\u7f8e\u56fd\u9ec4\u77f3\u516c\u56ed\u6765\u4e00\u4e0b\uff0c\u65f6\u95f4\u5c31\u9009\u62e9\u5341\u6708\u4e00\u53f7\uff0c\u5b8c\u4e86\u6211\u8bf7\u4f60\u559d\u9152\u3002",
+        "words": [
+            "\u5927\u4ed9",
+            "\uff0c",
+            "\u7ed9\u7f8e\u56fd\u9ec4\u77f3\u516c\u56ed\u6765\u4e00\u4e0b",
+            "\uff0c",
+            "\u65f6\u95f4\u5c31\u9009\u62e9\u5341\u6708\u4e00\u53f7",
+            "\uff0c",
+            "\u5b8c\u4e86\u6211\u8bf7\u4f60\u559d\u9152",
+            "\u3002"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                911,
+                912
+            ],
+            [
+                912,
+                913
+            ],
+            [
+                913,
+                917
+            ],
+            [
+                917,
+                918
+            ]
+        ],
+        "seg_end": 918,
+        "seg_start": 911,
+        "sentence": "</post>",
+        "words": [
+            "<",
+            "/",
+            "post",
+            ">"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [
+            {
+                "end": 940,
+                "entity-type": "PER:specificIndividual",
+                "start": 933,
+                "text": "wxjqq11"
+            }
+        ],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                919,
+                920
+            ],
+            [
+                920,
+                924
+            ],
+            [
+                925,
+                931
+            ],
+            [
+                931,
+                932
+            ],
+            [
+                932,
+                933
+            ],
+            [
+                933,
+                940
+            ],
+            [
+                940,
+                941
+            ],
+            [
+                942,
+                950
+            ],
+            [
+                950,
+                951
+            ],
+            [
+                951,
+                952
+            ],
+            [
+                952,
+                956
+            ],
+            [
+                956,
+                957
+            ],
+            [
+                957,
+                959
+            ],
+            [
+                959,
+                960
+            ],
+            [
+                960,
+                965
+            ],
+            [
+                965,
+                966
+            ],
+            [
+                966,
+                968
+            ],
+            [
+                968,
+                969
+            ],
+            [
+                969,
+                971
+            ],
+            [
+                971,
+                972
+            ],
+            [
+                973,
+                975
+            ],
+            [
+                975,
+                976
+            ],
+            [
+                976,
+                977
+            ],
+            [
+                977,
+                979
+            ],
+            [
+                979,
+                980
+            ],
+            [
+                980,
+                981
+            ]
+        ],
+        "seg_end": 981,
+        "seg_start": 919,
+        "sentence": "<post author=\"wxjqq11\" datetime=\"2013-11-14T18:09:06\" id=\"p3\">",
+        "words": [
+            "<",
+            "post",
+            "author",
+            "=",
+            "\"",
+            "wxjqq11",
+            "\"",
+            "datetime",
+            "=",
+            "\"",
+            "2013",
+            "-",
+            "11",
+            "-",
+            "14T18",
+            ":",
+            "09",
+            ":",
+            "06",
+            "\"",
+            "id",
+            "=",
+            "\"",
+            "p3",
+            "\"",
+            ">"
+        ]
+    },
+    {
+        "doc_id": "CMN_DF_000191_20131114_G00A04J1T",
+        "golden-entity-mentions": [],
+        "golden-event-mentions": [],
+        "index": [
+            [
+                982,
+                983
+            ],
+            [
+                983,
+                988
+            ],
+            [
+                989,
+                993
+            ],
+            [
+                993,
+                994
+            ],
+            [
+                994,
+                1000
+            ],
+            [
+                1000,
+                1001
+            ],
+            [
+                1001,
+                1002
+            ],
+            [
+                1002,
+                1010
+            ],
+            [
+                1010,
+                1011
+            ],
+            [
+                1011,
+                1012
+            ]
+        ],
+        "seg_end": 1012,
+        "seg_start": 982,
+        "sentence": "<quote orig_author=\"wyvernka\">",
+        "words": [
+            "<",
+            "quote",
+            "orig",
+            "_",
+            "author",
+            "=",
+            "\"",
+            "wyvernka",
+            "\"",
+            ">"
+        ]
+    }
+]

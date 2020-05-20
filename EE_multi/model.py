@@ -216,7 +216,7 @@ class Net(nn.Module):
                 enc = encoded_layers#encoded_layers[-1]
 
         if self.use_alignment:
-            aligning = getattr(self, 'aligning_{}'.format(lang.item()))
+            aligning = getattr(self, 'aligning_{}'.format(lang))
             enc = aligning(enc)
 
         x = enc
@@ -298,10 +298,16 @@ class Net(nn.Module):
                 e_start, e_end, e_type_str = candidates[j]
                 golden_entity_tensors[candidates[j]] = x[i, e_start:e_end, ].mean(dim=0)
 
+            print("trigger_hat_2d:", trigger_hat_2d)
             if self.use_pred_trig:
-                used_triggers = find_triggers([idx2trigger[trigger] for trigger in trigger_hat_2d[i].tolist()])
+                triggers_list = [idx2trigger[trigger] for trigger in trigger_hat_2d[i].tolist()]
+
             else:
-                used_triggers = find_triggers([idx2trigger[trigger] for trigger in triggers_y_2d[i].tolist()])
+                triggers_list = [idx2trigger[trigger] for trigger in triggers_y_2d[i].tolist()]
+
+            print("triggers_list:", triggers_list)
+            used_triggers = find_triggers(triggers_list)
+            print("used_triggers:", used_triggers)
 
             for used_trigger in used_triggers:
                 t_start, t_end, t_type_str = used_trigger
@@ -326,7 +332,7 @@ class Net(nn.Module):
             trigger_loss = self.tri_CRF1.neg_log_likelihood_loss(feats=trigger_logits, mask=mask, tags=triggers_y_2d)
         else:
             trigger_logits = trigger_logits.view(-1, trigger_logits.shape[-1])
-            trigger_loss = criterion(trigger_logits, triggers_y_2d.view(-1))
+            trigger_loss = nn.CrossEntropyLoss(ignore_index=0)(trigger_logits, triggers_y_2d.view(-1))
 
 
         return trigger_loss, trigger_logits, triggers_y_2d, trigger_hat_2d, argument_hidden, argument_keys
@@ -362,7 +368,7 @@ class Net(nn.Module):
     def forward(self,  features, labels, lang, tokens_x_2d, entities_x_3d, postags_x_2d, head_indexes_2d, triggers_y_2d):
 
         # Instrinsic loss
-        print("self.use_multi_tasking:", self.use_multi_tasking)
+        #print("self.use_multi_tasking:", self.use_multi_tasking)
         if self.use_multi_tasking:
             sentence_embeddings =  self._get_sentence_embeddings(features)
 
@@ -371,17 +377,17 @@ class Net(nn.Module):
             intrinsic_loss = 0
 
         trigger_loss, trigger_logits, triggers_y_2d, trigger_hat_2d, argument_hidden, argument_keys \
-            = self._predict_triggers(lang, tokens_x_2d, entities_x_3d, postags_x_2d, head_indexes_2d, triggers_y_2d)
+            = self._predict_triggers(lang_dict[lang.item()], tokens_x_2d, entities_x_3d, postags_x_2d, head_indexes_2d, triggers_y_2d)
 
         if len(argument_keys) > 0:
             argument_logits, arguments_y_1d, argument_hat_1d, argument_hat_2d = self._predict_arguments(argument_hidden, argument_keys)
             argument_loss = self.criterion(argument_logits, arguments_y_1d)
             event_loss = trigger_loss + 2 * argument_loss
         else:
-            argument_loss = 100
+            argument_loss = torch.tensor([100]).to(self.device)
             event_loss = trigger_loss
 
-        return intrinsic_loss, triggers_y_2d, trigger_hat_2d, trigger_loss, argument_loss, event_loss
+        return torch.tensor([intrinsic_loss]).to(self.device), triggers_y_2d, trigger_hat_2d, trigger_loss, argument_loss, event_loss
 
 # Reused from https://github.com/lx865712528/EMNLP2018-JMEE
 class MultiLabelEmbeddingLayer(nn.Module):

@@ -34,7 +34,8 @@ MODELS_dict = {"BertLarge": (BertModel, BertTokenizer, 'bert-large-uncased'),
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--batch_size", type=int, default=24)
+    parser.add_argument("--batch_size", type=int, default=8)
+    parser.add_argument("--batch-size-intr", type=int, default=8)
     parser.add_argument("--lr", type=float, default=0.00002)
     parser.add_argument("--n_epochs", type=int, default=50)
     parser.add_argument("--logdir", type=str, default="logdir")
@@ -59,9 +60,9 @@ def get_args():
     parser.add_argument("--use-multi-task", default=False, action='store_true') # False
     parser.add_argument("--pooling-choice", type=str, default="mean")
     parser.add_argument("--intr-ratio", type=float, default=0.5)
-    parser.add_argument("--xintrpath", type=str, default="")
-    parser.add_argument("--stsbpath", type=str, default="")
-    parser.add_argument("--use-alignment", type=bool, default=False)
+    parser.add_argument("--xintr-path", type=str, default="")
+    parser.add_argument("--stsb-path", type=str, default="")
+    parser.add_argument("--use-alignment", default=False, action='store_true')
     parser.add_argument("--alignment-choice", type=str, default="gd")
     parser.add_argument("--schema-type", type=str, default="BETTER")
     parser.add_argument("--output-dir", type=str)

@@ -95,10 +95,15 @@ def load_instrinsic_xsts_data(batch_size, stsb_path, test_lang, train_lang="en")
 
     return sts_mono_train_evaluator, sts_mono_test_evaluator, sts_bil_evaluator
 
+
 def train_parallel(train_lang, model, iterator, use_multi_task, intr_ratio, train_dataloader, optimizer, loss_choice, criterion, epoch, writer):
     model.train()
+    if use_multi_task:
+        train_iterator = iter(train_dataloader)
 
     for i, batch in enumerate(iterator):
+        #if cuda_yes:
+        #    GPUtil.showUtilization()
         tokens_x_2d, entities_x_3d, postags_x_2d, triggers_y_2d, arguments_2d, seqlens_1d, head_indexes_2d, words_2d, triggers_2d, adjm = batch
 
         optimizer.zero_grad()
@@ -121,17 +126,16 @@ def train_parallel(train_lang, model, iterator, use_multi_task, intr_ratio, trai
                 train_iterator = iter(train_dataloader)
                 intr_data = next(train_iterator)
 
-            features, labels = batch_to_device(intr_data, model.device)
+            features, labels = batch_to_device(intr_data, model.module.device)
         else:
             features = tokens_x_2d
             labels = tokens_x_2d
 
-        model.arguments_2d = arguments_2d
-        model.adjm = adjm
+        model.module.arguments_2d = arguments_2d
+        model.module.adjm = adjm
         intrinsic_loss, triggers_y_2d, trigger_hat_2d, trigger_loss, argument_loss, event_loss \
-            = model(features, labels, lang=torch.tensor([lang_dict[train_lang]]).to(model.device), tokens_x_2d=tokens_x_2d,
-                    entities_x_3d=entities_x_3d, postags_x_2d=postags_x_2d, head_indexes_2d=head_indexes_2d,
-                    triggers_y_2d=triggers_y_2d)
+            = model(features, labels, torch.tensor([lang_dict[train_lang]]).to(model.module.device), tokens_x_2d,
+                    entities_x_3d, postags_x_2d, head_indexes_2d, triggers_y_2d)
 
         if use_multi_task:
             #if random.choice([0,1]) == 0:
@@ -173,6 +177,9 @@ def train_parallel(train_lang, model, iterator, use_multi_task, intr_ratio, trai
 def train(train_lang, model, iterator, use_multi_task, intr_ratio, train_dataloader, optimizer, loss_choice, criterion, epoch, writer):
     model.train()
 
+    if use_multi_task:
+        train_iterator = iter(train_dataloader)
+
     for i, batch in enumerate(iterator):
         tokens_x_2d, entities_x_3d, postags_x_2d, triggers_y_2d, arguments_2d, seqlens_1d, head_indexes_2d, words_2d, triggers_2d, adjm = batch
 
@@ -197,7 +204,7 @@ def train(train_lang, model, iterator, use_multi_task, intr_ratio, train_dataloa
                 train_iterator = iter(train_dataloader)
                 intr_data = next(train_iterator)
 
-            features, labels = batch_to_device(intr_data, model.device)
+            features, labels = batch_to_device(intr_data, model.module.device)
 
             sentence_embeddings =  model.module._get_sentence_embeddings(features)
 
@@ -219,6 +226,7 @@ def train(train_lang, model, iterator, use_multi_task, intr_ratio, train_dataloa
                 print("argument_hat_2d[0]:", argument_hat_2d[0]['events'])
                 print("=======================")
         else:
+            argument_loss = 100
             event_loss = trigger_loss
 
 
@@ -285,7 +293,7 @@ if __name__ == "__main__":
     sampler = torch.utils.data.WeightedRandomSampler(samples_weight, len(samples_weight))
     train_iter = data.DataLoader(dataset=train_dataset,
                                  batch_size=hp.batch_size,
-                                 shuffle=True,
+                                 shuffle=False,
                                  sampler=sampler,
                                  num_workers=4,
                                  collate_fn=pad)
@@ -303,7 +311,7 @@ if __name__ == "__main__":
 
     test_iter = {}
     for lang in test_langs:
-        test_iter.update({lang: data.DataLoader(dataset=test_dataset,
+        test_iter.update({lang: data.DataLoader(dataset=test_dataset[lang],
                                     batch_size=1,
                                     shuffle=False,
                                     num_workers=4,
@@ -337,6 +345,8 @@ if __name__ == "__main__":
     else:
         alignment_files = None
 
+    print("len(all_triggers):", len(all_triggers))
+
     model = Net(
         use_multi_tasking=hp.use_multi_task,
         aligning_files=alignment_files,
@@ -358,7 +368,9 @@ if __name__ == "__main__":
     #if device == 'cuda':
     #    model = model.cuda()
 
-    model = nn.DataParallel(model, device_ids=[0,1])
+    #model = nn.DataParallel(model, device_ids=[0,1])
+    model = nn.DataParallel(model)
+
     model.to(device)
 
     optimizer = optim.Adam(model.parameters(), lr=hp.lr)
@@ -387,11 +399,12 @@ if __name__ == "__main__":
     eval_progress_f1 = 0
     epoch_wout_progress = 0
     for epoch in range(1, hp.n_epochs + 1):
-        train(train_lang, model, train_iter, hp.use_multi_task, hp.intr_ratio, train_trip_dataloader, optimizer, "triplet", criterion, epoch, writer)
+        train_parallel(train_lang, model, train_iter, hp.use_multi_task, hp.intr_ratio, train_trip_dataloader, optimizer, "triplet", criterion, epoch, writer)
+        #train(train_lang, model, train_iter, hp.use_multi_task, hp.intr_ratio, train_trip_dataloader, optimizer, "triplet", criterion, epoch, writer)
         batch_size = hp.batch_size
         fname = os.path.join(model_path + hp.logdir, str(epoch))
         print(f"=========eval dev at epoch={epoch}=========")
-        metric_dev, metric_dev_dict  = eval(train_lang, model, dev_iter, fname + '_dev')
+        metric_dev, metric_dev_dict  = eval(train_lang, model, dev_iter, hp.use_multi_task, hp.intr_ratio, train_trip_dataloader, fname + '_dev')
 
         for task in ["trig", "arg"]:
             for task_type in ["ident", "class"]:
@@ -401,10 +414,9 @@ if __name__ == "__main__":
 
         for lang in test_langs:
             print("=========eval test on %s at epoch=%d=========" % (lang, epoch))
+            metric_test, metric_test_dict = eval(lang, model, test_iter[lang], hp.use_multi_task, hp.intr_ratio, train_trip_dataloader, fname + '_test')
             for task in ["trig", "arg"]:
                 for task_type in ["ident", "class"]:
-                        metric_test, metric_test_dict = eval(lang, model, test_iter, fname + '_test')
-
                         writer.add_scalar('test_'+task+'_'+task_type+"_"+lang+'_p', metric_test_dict[task][task_type]["p"], epoch)
                         writer.add_scalar('test_'+task+'_'+task_type+"_"+lang+'_r', metric_test_dict[task][task_type]["r"], epoch)
                         writer.add_scalar('test_'+task+'_'+task_type+"_"+lang+'_f1', metric_test_dict[task][task_type]["f1"], epoch)
@@ -471,9 +483,9 @@ if __name__ == "__main__":
                     writer.add_scalar('spearman_euclidean_bil'+lang, spearman_euclidean_bil, epoch)
                     writer.add_scalar('spearman_dot_bil'+lang, spearman_dot_bil, epoch)
 
-        if metric_test_dict["argument"]["class"]["f1"] > eval_progress_f1:
+        if metric_test_dict["arg"]["class"]["f1"] > eval_progress_f1:
             epoch_wout_progress = 0
-            eval_progress_f1 = metric_test_dict["argument"]["class"]["f1"]
+            eval_progress_f1 = metric_test_dict["arg"]["class"]["f1"]
             torch.save(model, model_path + "latest_model.pt")
         else:
             epoch_wout_progress += 1
